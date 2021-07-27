@@ -1,0 +1,58 @@
+/**
+  All hyperlinks change color from red->cyan
+  a: rgb(255,10,19); rgb(0,200,200);
+  p: rgb(220,200,250);
+*/
+a { text-decoration: none; color:rgb(200,22,25); }
+a:visited { text-decoration: none; color:rgb(200,22,25); }
+a:focus { text-decoration: none; color:rgb(200,22,25); }
+a:hover { text-decoration: none; color:#000; }
+a:hover, .navBtn:active { text-decoration: none; color:rgb(120,50,250); }
+body { color: rgb(200,22,25) }
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
+html {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(230,190,90);
+  box-sizing: border-box;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.bar {
+  display: flex;
+  width: 100%;
+  background: #9f9;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.pages {
+  flex: 1 0 auto;
+  text-align: center;
+} 
+.nav {
+  padding: 2%;
+}
+.title {
+  order: 1;
+  text-align: center;
+}
+.header{
+  order: 2;
+  text-align: center;
+}
+.flex-content{
+  order: 3;
+  flex: 3 1 auto;
+  text-align: center;
+}
+.announcements{
+  text-align: center;
+}
