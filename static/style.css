@@ -8,6 +8,9 @@ a:visited { text-decoration: none; color:rgb(200,22,25); }
 a:focus { text-decoration: none; color:rgb(200,22,25); }
 a:hover { text-decoration: none; color:#000; }
 a:hover, .navBtn:active { text-decoration: none; color:rgb(120,50,250); }
+:root {
+  --c1:#ef9;
+}
 body { color: rgb(200,22,25) }
 /* *, *:before, *:after {
   box-sizing: inherit;
@@ -17,6 +20,27 @@ html {
   margin: 0;
   background-color: rgb(230,190,90);
   box-sizing: border-box;
+  --s:60px; /* shape size */
+  --m:2px;  /* space */
+
+  --v1: #ddd 119.5deg, transparent 120.5deg;
+  --v2: rgba(255,220,220, 0.1)  119.5deg, transparent 120.5deg;
+  --v3: rgba(0,0,250,0.1);
+  background:
+  /* 6 */
+  conic-gradient(at var(--m)              calc(var(--s)*0.5777), transparent 270deg, var(--v3) 0deg),
+  conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), var(--v3) 90deg,  transparent 0deg),
+  /* 5 */
+  /* conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)), */
+  /* 4 */
+  conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+  /* 3 */
+  /* conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)), */
+  /* 2 */
+  conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+  /* 1 */
+  linear-gradient(90deg, #efe calc(50% - var(--m)),black 0 calc(50% + var(--m)), #ef9 0);
+  background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
 }
 .flex-container{
   display: flex;
@@ -26,7 +50,9 @@ html {
 .bar {
   display: flex;
   width: 100%;
-  background: #9f9;
+  background-color: var(--c1);
+  /* background: rgba(140,140,140,0.2); */
+  
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -43,6 +69,8 @@ html {
 .title {
   order: 1;
   text-align: center;
+  color: #000;
+  background-color: var(--c1);
 }
 .header{
   order: 2;
@@ -53,6 +81,29 @@ html {
   flex: 3 1 auto;
   text-align: center;
 }
-.announcements{
+/* .flier{
+  display: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+} */
+#flier{
+  height: auto;
+  max-width: 90%;
+}
+.announcements{
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  align-items: center;
+  background-color: var(--c1);
+  /* background: linear-gradient(0deg, #FFC0CB 50%, #00FFFF 50%); */
+  width: 50%;
+  max-width: 90%;
+  padding-bottom: 100px;
 }
