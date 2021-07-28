@@ -24,8 +24,8 @@ html {
   --m:2px;  /* space */
 
   --v1: #ddd 119.5deg, transparent 120.5deg;
-  --v2: rgba(255,220,220, 0.1)  119.5deg, transparent 120.5deg;
-  --v3: rgba(0,0,250,0.1);
+  --v2: rgba(255, 220, 220, 0.3)  119.5deg, transparent 120.5deg;
+  --v3: rgba(132, 132, 194, 0.6);
   background:
   /* 6 */
   conic-gradient(at var(--m)              calc(var(--s)*0.5777), transparent 270deg, var(--v3) 0deg),
@@ -81,7 +81,7 @@ html {
   flex: 3 1 auto;
   text-align: center;
 }
-/* .flier{
+.flier{
   display: auto;
   height: auto;
   max-width: 100%;
@@ -90,10 +90,26 @@ html {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-} */
+}
 #flier{
   height: auto;
   max-width: 90%;
+}
+#rolling-ball{
+  height: 50px;
+  width: auto;
+  animation: rotation 5s infinite ;
+}
+@keyframes rotation {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(420px) rotate(719deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
 }
 .announcements{
   display:block;
@@ -103,7 +119,7 @@ html {
   align-items: center;
   background-color: var(--c1);
   /* background: linear-gradient(0deg, #FFC0CB 50%, #00FFFF 50%); */
-  width: 50%;
+  width: 70%;
   max-width: 90%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
