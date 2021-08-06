@@ -15,8 +15,14 @@ a:hover, .navBtn:active { text-decoration: none; color:rgb(120,50,250); }
 :root {
   /* --c1:#fefefe; */
   --c1: rgb(245, 237, 239);
+  --v1: #fefefe 119.5deg, transparent 120.5deg;
+  --v2: rgba(218,170,168,0.2) 119.5deg, transparent 120.5deg;
+  --v3: rgba(249,244,177,0.3);
+  --v4: rgba(145,212,228,1);
 }
-body { color: rgb(200,22,25) }
+body { 
+  /* color: rgb(200,22,25) */
+ }
 /* *, *:before, *:after {
   box-sizing: inherit;
 } */
@@ -28,10 +34,6 @@ html {
   --s:60px; /* shape size */
   --m:2px;  /* space */
 
-  --v1: #fefefe 119.5deg, transparent 120.5deg;
-  --v2: rgba(218,170,168,0.2) 119.5deg, transparent 120.5deg;
-  --v3: rgba(249,244,177,0.3);
-  --v4: rgba(145,212,228,1);
   background-color: var(--v4);
   background:
   /* 6 */
@@ -77,10 +79,13 @@ html {
   padding: 2%;
 }
 .nav-item img {
-  float: left;
+  /* float: left; */
+  align-items: center;
   margin-left: 2%;
-  width: 50px;
+  /* padding: 5px; */
+  width: 69px;
   margin-bottom: 10px;
+  /* background-color: #fefefe; */
   filter: drop-shadow(12px 12px 25px rgb(255, 255, 255));
 }
 .title {
@@ -88,7 +93,7 @@ html {
   text-align: center;
   /* max-width: 55px; */
   /* align-items: center; */
-  color: #000;
+  /* color: #000; */
   background-color: var(--c1);
 }
 #logo {
@@ -115,7 +120,7 @@ html {
 .header h1 {
   order: 0;
   /* position: fixed; */
-  color: #000;
+  color: cadetblue;
   text-align: center;
   background-color: var(--c1);
   padding-top: 5px;
@@ -147,7 +152,7 @@ html {
 #rolling-ball{
   height: 50px;
   width: auto;
-  animation: rotation 5s infinite ;
+  animation: rotation 7s infinite ;
 }
 @keyframes rotation {
   0% {
