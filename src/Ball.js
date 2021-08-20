@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { useLoader, useFrame } from "@react-three/fiber";
 import{ useEffect, useRef } from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { settings } from "./settings"
 
 const Ball = () => {
   const mixer = useRef()
