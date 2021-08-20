@@ -1,27 +1,25 @@
-import { Canvas } from '@react-three/fiber';
-import * as THREE from 'three';
-import Ball from './Ball';
-// import FieldTexture from './VideoTexture';
-
 import './App.css';
-import { Suspense } from 'react';
+import { Home, HomePage } from './pages/HomePage';
+import { About, AboutPage } from './pages/About';
+import { Contact, ContactPage } from './pages/Contact';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { DonatePage } from './pages/Donate';
+import { GetABallPage } from './pages/GetABall';
 
 function App() {
   return (
-    <Canvas
-      camera={{ position: [0, 0, -10], fov: 50 }}
-      onCreated={({ camera, gl, scene }) => {
-        camera.lookAt(new THREE.Vector3(0, 0, 0))
-        scene.background = null
-        gl.shadowMap.enabled = true
-        gl.shadowMap.type = THREE.PCFSoftShadowMap
-      }}>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Suspense fallback={null}>
-        <Ball/>
-      </Suspense>
-    </Canvas>
+    <>
+      <BrowserRouter>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/donate" component={DonatePage} />
+        <Route path="/get" component={GetABallPage}/>
+      </BrowserRouter>
+      {/* <Home /> */}
+      {/* < About /> */}
+      {/* < Contact /> */}
+    </>
   );
 }
 
