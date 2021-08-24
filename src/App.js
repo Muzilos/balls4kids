@@ -1,24 +1,18 @@
-// import { Canvas } from '@react-three/fiber';
-// import * as THREE from 'three';
-// import Ball from './Ball';
+import { Canvas } from '@react-three/fiber';
+import * as THREE from 'three';
+import Ball from './Ball';
 import './App.css';
-// import { Suspense } from 'react';
-// import { Vector3 } from 'three';
-// import Controls from './Controls';
+import { Suspense } from 'react';
+import { Vector3 } from 'three';
+import Controls from './Controls';
 import { FieldVideo } from './Video';
+import { HeaderLogo } from './Logo';
 
 function App() {
-  // Get the video
-  // var video = document.getElementById("video");
-  // if (video.paused) {
-  //   video.play()
-  // }
   return (
     <>
-    <FieldVideo>
-      
-    </FieldVideo>
-    {/**
+    <FieldVideo />
+    <HeaderLogo />
     <Canvas
       camera={{ position: [0, 0, -10], fov: 50, zoom: 2 }}
       onCreated={({ scene, camera, gl }) => {
@@ -40,7 +34,7 @@ function App() {
           <Ball/>
           <Controls/>
         </Suspense>
-    </Canvas>*/}
+    </Canvas>
     </>
   );
 }
