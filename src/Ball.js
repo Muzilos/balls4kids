@@ -1,4 +1,3 @@
-import * as THREE from 'three';
 import * as React from 'react';
 import { useLoader, useFrame } from "@react-three/fiber";
 import{ useEffect, useRef, useState } from "react"
@@ -15,19 +14,15 @@ function getWindowDimensions() {
 const Ball = () => {
   const mixer = useRef()
   const gltf = useLoader(GLTFLoader, '/Ball.glb')
-	const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions()); 
-
-  useEffect(() => {
+  let logoWidth = document.getElementById('B4KCircle').clientWidth
+  let videoHeight = document.getElementById('video').clientHeight
+useEffect(() => {
     if (gltf) {
-      let pageWidth = windowDimensions.width;
-      let logoWidth = document.getElementById('B4KCircle').clientWidth
-      let videoWidth = document.getElementById('video').clientWidth
-      gltf.scene.scale.setScalar(1.7*logoWidth/videoWidth)
+      gltf.scene.scale.setScalar(1.7*logoWidth/videoHeight)
       function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-        let pageWidth = windowDimensions.width;
-        let logoWidth = document.getElementById('B4KCircle').clientWidth  
-        gltf.scene.scale.setScalar(1.7*logoWidth/windowDimensions.width)
+        logoWidth = document.getElementById('B4KCircle').clientWidth 
+        videoHeight = document.getElementById('video').clientHeight
+        gltf.scene.scale.setScalar(1.5*logoWidth/videoHeight)
       }
       window.addEventListener("resize", handleResize);
       

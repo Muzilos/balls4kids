@@ -1,7 +1,22 @@
 * {
     box-sizing: border-box;
   }
-  
+  @font-face {
+    font-family: 'adineue PRO';
+    src: local('adineue PRO'), url('./fonts/adineue PRO.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'adineue PRO';
+    font-weight: bold;
+    src: local('adineue PRO'), url('./fonts/adineue PRO.ttf') format('ttf');
+  }
+  h1 { 
+    font-family: 'adineue PRO', sans-serif;
+    font-size: 10vw;
+    background: linear-gradient(to right, #dbaead, #c1ad48, #a1d1e6); 
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+  }
   html,
   body,
   #root {
@@ -22,30 +37,31 @@
   /* Style the video: 100% width and height to cover the entire window */
   #video {
     order: 1;
-    display: flex;
-    left: 0;
+    position: top;
     top: 0;
-    width: 100vw;
+    left:50%;
+    /* transform: translateX(-50%); */
     height: 100%;
+    /* width: 100%; */
   }
   .video-horizontal {
     position:absolute;
     display:inline-block;
     left: 0;
     top: 0;
-    width: 100vw;
     height: 100%;
+    width: 100%;
     min-width: 10vw;
     min-height: 10vh;
   }
   .video-vertical {
     position:absolute;
     transform-origin: top left;
-    /* transform: rotate(90deg); */
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
-    width: 100vw;
     height: 100%;
+    width: 100%;
     min-width: 10vw;
     min-height: 10vh;  }
   #header-logo {
@@ -75,6 +91,49 @@
     /* top: 0;
     left: 50%;
     transform: translate(-50%, -120%); */
+  }
+  #give {
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 55vw;
+    transform-origin: center;
+    /* transform: rotate(-90deg); */
+  }
+  #get {
+    position:absolute;
+    left: 55%;
+    top: 0;
+    height: 100vh;
+    width: 45vw;
+    /* transform: rotate(90deg); */
+  }
+  .giveget {
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-orientation:sideways-right;
+    background-color: transparent;
+    border:none;
+    padding: 0px;
+  }
+  #give:hover {
+    background-color: rgba(255,255,255,0.05);
+  }
+  #get:hover {
+    background-color: rgba(255,255,255,0.05);
+  }
+  .giveget:focus {
+    background-color: rgba(125, 208, 247, 0.1);
+  }
+  .rotate-left {
+    transform: rotate(90deg);
+  }
+  .rotate-right {
+    transform: rotate(-90deg);
   }
   body {
     position: fixed;

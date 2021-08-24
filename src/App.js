@@ -7,6 +7,7 @@ import { Vector3 } from 'three';
 import Controls from './Controls';
 import { FieldVideo } from './Video';
 import { HeaderLogo } from './Logo';
+import { GiveButton, GetButton } from './GiveGetButtons';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Controls/>
         </Suspense>
     </Canvas>
+    <GiveButton /> <GetButton />
     </>
   );
 }
