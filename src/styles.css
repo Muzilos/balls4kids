@@ -3,19 +3,20 @@
   }
   @font-face {
     font-family: 'adineue PRO';
-    src: local('adineue PRO'), url('./fonts/adineue PRO.ttf') format('ttf');
+    src: local('adineue PRO'), url('./fonts/adineue\ PRO\ Bold\ Web\ Regular.woff') format('woff');
   }
   @font-face {
     font-family: 'adineue PRO';
     font-weight: bold;
-    src: local('adineue PRO'), url('./fonts/adineue PRO.ttf') format('ttf');
+    src: local('adineue PRO'), url('./fonts/adineue\ PRO\ Bold\ Web\ Regular.woff') format('woff');
   }
   h1 { 
-    font-family: 'adineue PRO', sans-serif;
+    font-family: 'adineue PRO';
     font-size: 10vw;
-    background: linear-gradient(to right, #dbaead, #c1ad48, #a1d1e6); 
+    background-image: linear-gradient( #c1ad48, #dbaead, #a1d1e6); 
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
+    text-shadow: -2px -2px rgba(0,0,0,0.1);
   }
   html,
   body,
