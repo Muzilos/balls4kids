@@ -21,7 +21,7 @@ export const FieldVideo = () => {
 	const imagePath = '/B4K - With Circle.png'
 	const videoElement = (
 		<div class={className}>
-			<video id="video" src={vid.src} crossOrigin={vid.crossOrigin} loop={vid.loop}
+			<video id="video" src={vid.src} crossOrigin={vid.crossOrigin} loop
 				muted={vid.muted} playsInline={vid.playsInline} autoPlay> 
 			</video>
 			<div id='center-logo'>
