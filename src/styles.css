@@ -107,7 +107,7 @@
     left: 30%;
   }
   #about-text {
-    font-size: 3vh;
+    font-size: 20px;
   }
   #founders-statement {
     font-style: italic;
@@ -295,3 +295,7 @@
     width: 90vw;
   }
   
+  .about-image {
+    padding: 10px;
+    max-width: 300px;
+  }

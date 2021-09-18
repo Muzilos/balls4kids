@@ -5,7 +5,8 @@ import { withRouter } from 'react-router';
 // import LinkButton from './components/LinkButton';
 
 function About() {
-  const imagePath = '/logo192.png'
+  const image1Path = '/image1.jpg'
+  const image2Path = '/image2.jpg'
   return (
     <>
         <div id="about-header">
@@ -14,11 +15,11 @@ function About() {
             </h1>
         </div>
         <div id="about-content">
-        <img src={imagePath} align="right"></img>
+        <img src={image1Path} align="right" class="about-image"></img>
         <p id="about-text">Balls 4 Kids is a nonprofit that provides children in underserved communities with soccer balls, equipment, and mentorship to lead happy, healthy, lives. 
 Our “goal” is to level the playing field, one ball at a time.<br/>
 Balls 4 Kids is registered in the state of New York as a limited liability corporation. We are currently in process for 501c(3) tax exemption.</p>
-        <img src={imagePath} align="left"></img>
+        <img src={image2Path} align="left" class="about-image"></img>
         <br/><br/>
         <p id="founders-statement">“Soccer is a universal language. Nothing brings people together like kicking a ball around, any time, anywhere. 
           I’ve been playing soccer for over 20 years, and nothing brings me greater joy. 
