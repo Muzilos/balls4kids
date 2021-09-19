@@ -11,7 +11,7 @@ function About() {
     <>
         <div id="about-header">
             <HeaderLogoLeft /> <h1 class="about-blurb">
-                "Leveling the playing field ... <br/> one ball at a time"
+                "Leveling the playing field ... one ball at a time"
             </h1>
         </div>
         <div id="about-content">
