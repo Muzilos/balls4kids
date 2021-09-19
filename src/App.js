@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        {/* <Route exact path="" component={HomePage} /> */}
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />

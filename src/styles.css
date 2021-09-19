@@ -147,7 +147,7 @@
   #give {
     position:absolute;
     left: 0;
-    top: 0;
+    top: 50%;
     height: 50vh;
     width: 50%;
     transform-origin: center;
@@ -156,7 +156,7 @@
   #get {
     position:absolute;
     left: 50%;
-    top: 0;
+    top: 50%;
     height: 50vh;
     width: 50%;
     /* transform: rotate(90deg); */
@@ -176,7 +176,7 @@
   #about {
     position:absolute;
     left: 0;
-    top: 50%;
+    top: 0;
     height: 50vh;
     width: 50%;
     transform-origin: center;
@@ -185,7 +185,7 @@
   #contact {
     position:absolute;
     left: 50%;
-    top: 50%;
+    top: 0;
     height: 50vh;
     width: 50%;
     /* transform: rotate(90deg); */
@@ -296,6 +296,65 @@
   }
   
   .about-image {
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .about-section-1 {
+    position: relative;
+    /* top: 20% */
+  }
+  .about-section-2 {
+    position: relative;
+    /* top: 50% */
+  }
+
+  .about-section-1 p {
+    /* display: block; */
+    /* position: absolute; */
+    /* float: left; */
+    vertical-align: baseline;
+    background-color: #a1d1e6;
+    border-style: solid;
+    border-color: black;
+    border-width: 6px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+    /* max-width: 50% */
+  }
+
+  .about-section-1 img {
+    /* display: block; */
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    vertical-align: baseline;
+    float: right;
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .about-section-2 p {
+    /* position: absolute; */
+    display: block;
+    top: 0;
+    right: 0;
+    float:right;
+    background-color: #dbaead;
+    border-style: solid;
+    border-color: black;
+    border-width: 6px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+    /* max-width: 50%; */
+  }
+
+  .about-section-2 img {
+    /* position: absolute; */
+    display: block;
+    float: left; 
     padding: 10px;
     max-width: 300px;
   }

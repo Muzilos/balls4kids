@@ -3,6 +3,7 @@ import { HeaderLogoLeft } from '../Logo';
 // import LinkButton from './components/LinkButton';
 import {withRouter} from 'react-router-dom';
 import PayPalComponent from '../components/PayPalComponent';
+import { useState } from 'react';
 
 function Donate() {
   return (
