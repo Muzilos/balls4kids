@@ -1,5 +1,5 @@
 import '../App.css';
-import { HeaderLogoLeft } from '../Logo';
+import { HeaderLogo, HeaderLogoLeft } from '../Logo';
 // import LinkButton from './components/LinkButton';
 import {withRouter} from 'react-router-dom';
 import PayPalComponent from '../components/PayPalComponent';
@@ -10,7 +10,7 @@ function Donate() {
   return (
     <>
         <div id="about-header">
-            <HeaderLogoLeft /></div>
+            <HeaderLogo /></div>
         <br/><br/>
         <div id="about-content" class="paypal-component">
         <div class="about-section-1">

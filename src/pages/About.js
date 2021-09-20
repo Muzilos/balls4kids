@@ -17,7 +17,7 @@ function About() {
         <div id="about-content">
         <div class="about-section-1">
         <img src={image1Path} ></img>
-        <p >Balls 4 Kids is a nonprofit that provides children in underserved communities with soccer balls, equipment, and mentorship to lead happy, healthy, lives. 
+        <p >Balls4Kids is a nonprofit that provides children in underserved communities with soccer balls, equipment, and mentorship to lead happy, healthy, lives. 
 Our “goal” is to level the playing field, one ball at a time.<br/>
 Balls 4 Kids is registered in the state of New York as a limited liability corporation. We are currently in process for 501c(3) tax exemption.</p>
         </div>

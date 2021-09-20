@@ -1,6 +1,6 @@
 import '../App.css';
 import { useState } from 'react';
-import { HeaderLogoLeft } from '../Logo';
+import { HeaderLogoLeft, HeaderLogo } from '../Logo';
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import {withRouter} from 'react-router-dom';
 
@@ -55,7 +55,7 @@ function GetABall() {
   return (
     <>
         <div id="about-header">
-            <HeaderLogoLeft /></div>
+            <HeaderLogo /></div>
         <br/><br/>
         <div id="about-content">            
         <b>Contact:</b> <a href="Balls4KidsCharity@gmail.com">balls4kidscharity@gmail.com </a><br/>
