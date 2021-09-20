@@ -214,7 +214,7 @@
     background-color: rgba(125, 208, 247, 0.1);
   }
   .top-left {
-    font-size: 36px;
+    font-size: 3em;
     padding-bottom: 5vh;
     color:  #c1ad48;
   }
@@ -222,18 +222,18 @@
     padding-bottom: 5vh;
     /* padding-bottom: 0vh; */
     color: #a1d1e6;
-    font-size: 36px;
+    font-size: 3em;
   }
   .bottom-left {
     padding: 2vw;
     padding-top: 15vh;
-    font-size: 36px;
+    font-size: 2.5em;
     color:  #c1ad48;
   }
   .bottom-right {
     padding: 1vw;
     padding-top: 15vh;
-    font-size: 36px;
+    font-size: 2.5em;
     color: #a1d1e6;
   }
   .rotate-left {
