@@ -1,0 +1,21 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "balls4kids",
+  "functionName": "balls4kidsCustomMessage",
+  "resourceName": "balls4kidsCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": "[\n  {\n    \"key\": \"RESOURCENAME\",\n    \"value\": \"resourceName\"\n  }\n]",
+  "triggerDir": "C:\\Users\\smm32\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "balls4kidsCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "balls4kids.com",
+  "EMAILSUBJECT": "[B4K] Email verified!",
+  "EMAILMESSAGE": "Congratulations, your email for ball4kids.com is now verified",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

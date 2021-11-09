@@ -1,0 +1,15 @@
+projects:
+  balls4kids:
+    schemaPath: amplify/backend/api/balls4kids/build/schema.graphql
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: us-east-2
+        apiId: null
+        maxDepth: 2

@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "balls4kids",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authballs4kids",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

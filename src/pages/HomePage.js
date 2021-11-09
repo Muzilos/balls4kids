@@ -1,10 +1,10 @@
-import { Canvas } from '@react-three/fiber';
-import * as THREE from 'three';
-import Ball from '../Ball';
+// import { Canvas } from '@react-three/fiber';
+// import * as THREE from 'three';
+// import Ball from '../Ball';
 import '../App.css';
-import { Suspense } from 'react';
-import { Vector3 } from 'three';
-import Controls from '../Controls';
+// import { Suspense } from 'react';
+// import { Vector3 } from 'three';
+// import Controls from '../Controls';
 import { FieldVideo } from '../Video';
 import { HeaderLogo } from '../Logo';
 import { GiveButton, GetButton } from '../GiveGetButtons';
@@ -17,7 +17,7 @@ function Home() {
     <>
     <FieldVideo />
     <HeaderLogo />
-    <Canvas
+    {/* <Canvas
       camera={{ position: [0, 0, -10], fov: 50, zoom: 2 }}
       onCreated={({ scene, camera, gl }) => {
         camera.lookAt(new Vector3(0,0,0))
@@ -35,10 +35,10 @@ function Home() {
           color={'white'}
         />
         <Suspense fallback={null}>
-          {/* <Ball/> */}
+          <Ball/>
           <Controls/>
         </Suspense>
-    </Canvas>
+    </Canvas> */}
     <AboutButton /> 
     <ContactButton />
     <GiveButton /> 
