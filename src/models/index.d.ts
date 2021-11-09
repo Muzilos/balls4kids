@@ -1,14 +1,14 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
-
-
-
-
-type ProfileMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
+export enum AboutSectionType {
+  BLURB = "BLURB",
+  CONTENT = "CONTENT",
+  FOUNDER_STATEMENT = "FOUNDER_STATEMENT"
 }
 
-type PostMetaData = {
+
+
+type POSTMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
@@ -16,33 +16,21 @@ type AboutMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class Profile {
-  readonly id: string;
-  readonly username?: string;
-  readonly posts?: (Post | null)[];
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<Profile, ProfileMetaData>);
-  static copyOf(source: Profile, mutator: (draft: MutableModel<Profile, ProfileMetaData>) => MutableModel<Profile, ProfileMetaData> | void): Profile;
-}
-
-export declare class Post {
+export declare class POST {
   readonly id: string;
   readonly title?: string;
+  readonly image?: (string | null)[];
   readonly description?: string;
-  readonly images_url?: string;
-  readonly tags?: string;
-  readonly author?: Profile;
-  readonly profileID?: string;
+  readonly caption?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
-  constructor(init: ModelInit<Post, PostMetaData>);
-  static copyOf(source: Post, mutator: (draft: MutableModel<Post, PostMetaData>) => MutableModel<Post, PostMetaData> | void): Post;
+  constructor(init: ModelInit<POST, POSTMetaData>);
+  static copyOf(source: POST, mutator: (draft: MutableModel<POST, POSTMetaData>) => MutableModel<POST, POSTMetaData> | void): POST;
 }
 
 export declare class About {
   readonly id: string;
-  readonly type?: string;
+  readonly type: AboutSectionType | keyof typeof AboutSectionType;
   readonly text?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;

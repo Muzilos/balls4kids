@@ -1,14 +1,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getPost = /* GraphQL */ `
-  query GetPost($id: ID!) {
-    getPost(id: $id) {
+export const getPOST = /* GraphQL */ `
+  query GetPOST($id: ID!) {
+    getPOST(id: $id) {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt
@@ -17,19 +17,19 @@ export const getPost = /* GraphQL */ `
     }
   }
 `;
-export const listPosts = /* GraphQL */ `
-  query ListPosts(
-    $filter: ModelPostFilterInput
+export const listPOSTs = /* GraphQL */ `
+  query ListPOSTs(
+    $filter: ModelPOSTFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPOSTs(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         title
+        image
         description
-        images_url
-        tags
+        caption
         _version
         _deleted
         _lastChangedAt
@@ -41,14 +41,14 @@ export const listPosts = /* GraphQL */ `
     }
   }
 `;
-export const syncPosts = /* GraphQL */ `
-  query SyncPosts(
-    $filter: ModelPostFilterInput
+export const syncPOSTS = /* GraphQL */ `
+  query SyncPOSTS(
+    $filter: ModelPOSTFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncPosts(
+    syncPOSTS(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -57,9 +57,9 @@ export const syncPosts = /* GraphQL */ `
       items {
         id
         title
+        image
         description
-        images_url
-        tags
+        caption
         _version
         _deleted
         _lastChangedAt

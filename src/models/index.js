@@ -2,12 +2,16 @@
 import { initSchema } from '@aws-amplify/datastore';
 import { schema } from './schema';
 
+const AboutSectionType = {
+  "BLURB": "BLURB",
+  "CONTENT": "CONTENT",
+  "FOUNDER_STATEMENT": "FOUNDER_STATEMENT"
+};
 
-
-const { Profile, Post, About } = initSchema(schema);
+const { POST, About } = initSchema(schema);
 
 export {
-  Profile,
-  Post,
-  About
+  POST,
+  About,
+  AboutSectionType
 };

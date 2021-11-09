@@ -1,51 +1,15 @@
 {
   "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-balls4kids-staging-23641-authRole",
-      "UnauthRoleArn": "arn:aws:iam::537522977343:role/amplify-balls4kids-staging-23641-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::537522977343:role/amplify-balls4kids-staging-23641-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-      "UnauthRoleName": "amplify-balls4kids-staging-23641-unauthRole",
-      "StackName": "amplify-balls4kids-staging-23641",
-      "StackId": "arn:aws:cloudformation:us-east-2:537522977343:stack/amplify-balls4kids-staging-23641/e01be850-4105-11ec-b669-0641baddc2b0",
-      "AmplifyAppId": "d210y1zslwjgdr"
-    },
-    "categories": {
-      "auth": {
-        "balls4kids": {}
-      },
-      "function": {
-        "balls4kidsDefineAuthChallenge": {
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/balls4kidsDefineAuthChallenge-61543072506c47445478-build.zip"
-        },
-        "balls4kidsCreateAuthChallenge": {
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/balls4kidsCreateAuthChallenge-773831726a65642b6777-build.zip"
-        },
-        "balls4kidsVerifyAuthChallengeResponse": {
-          "RECAPTCHASECRET": "",
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/balls4kidsVerifyAuthChallengeResponse-4b45746c79394278766f-build.zip"
-        },
-        "balls4kidsCustomMessage": {
-          "REDIRECTURL": "balls4kids.com",
-          "EMAILSUBJECT": "[B4K] Email verified!",
-          "EMAILMESSAGE": "Congratulations, your email for ball4kids.com is now verified",
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/balls4kidsCustomMessage-46366c4e446d2b64774b-build.zip"
-        },
-        "balls4kidsPostConfirmation": {
-          "GROUP": "normal",
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/balls4kidsPostConfirmation-433765672b714f6f3245-build.zip"
-        },
-        "AdminQueries23515afd": {
-          "deploymentBucketName": "amplify-balls4kids-staging-23641-deployment",
-          "s3Key": "amplify-builds/AdminQueries23515afd-62376163735370497a67-build.zip"
-        }
-      }
+      "AuthRoleName": "amplify-amplifybd7decbc86e74-staging-61505-authRole",
+      "UnauthRoleArn": "arn:aws:iam::537522977343:role/amplify-amplifybd7decbc86e74-staging-61505-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::537522977343:role/amplify-amplifybd7decbc86e74-staging-61505-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifybd7decbc86e74-staging-61505-deployment",
+      "UnauthRoleName": "amplify-amplifybd7decbc86e74-staging-61505-unauthRole",
+      "StackName": "amplify-amplifybd7decbc86e74-staging-61505",
+      "StackId": "arn:aws:cloudformation:us-east-1:537522977343:stack/amplify-amplifybd7decbc86e74-staging-61505/61cf33c0-4124-11ec-b7a2-0a9112a6d437",
+      "AmplifyAppId": "d3ika4s4aij8kh"
     }
   }
 }

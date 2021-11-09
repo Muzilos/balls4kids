@@ -5,7 +5,6 @@ import { Contact, ContactPage } from './pages/Contact';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { DonatePage } from './pages/Donate';
 import { GetABallPage } from './pages/GetABall';
-import { AmplifySignOut } from '@aws-amplify/ui-react'
 import AdminPage from './pages/AdminPage';
 
 function App() {

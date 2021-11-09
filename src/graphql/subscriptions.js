@@ -1,14 +1,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreatePost = /* GraphQL */ `
-  subscription OnCreatePost {
-    onCreatePost {
+export const onCreatePOST = /* GraphQL */ `
+  subscription OnCreatePOST {
+    onCreatePOST {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt
@@ -17,14 +17,14 @@ export const onCreatePost = /* GraphQL */ `
     }
   }
 `;
-export const onUpdatePost = /* GraphQL */ `
-  subscription OnUpdatePost {
-    onUpdatePost {
+export const onUpdatePOST = /* GraphQL */ `
+  subscription OnUpdatePOST {
+    onUpdatePOST {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt
@@ -33,14 +33,14 @@ export const onUpdatePost = /* GraphQL */ `
     }
   }
 `;
-export const onDeletePost = /* GraphQL */ `
-  subscription OnDeletePost {
-    onDeletePost {
+export const onDeletePOST = /* GraphQL */ `
+  subscription OnDeletePOST {
+    onDeletePOST {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt

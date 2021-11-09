@@ -1,17 +1,17 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createPost = /* GraphQL */ `
-  mutation CreatePost(
-    $input: CreatePostInput!
-    $condition: ModelPostConditionInput
+export const createPOST = /* GraphQL */ `
+  mutation CreatePOST(
+    $input: CreatePOSTInput!
+    $condition: ModelPOSTConditionInput
   ) {
-    createPost(input: $input, condition: $condition) {
+    createPOST(input: $input, condition: $condition) {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt
@@ -20,17 +20,17 @@ export const createPost = /* GraphQL */ `
     }
   }
 `;
-export const updatePost = /* GraphQL */ `
-  mutation UpdatePost(
-    $input: UpdatePostInput!
-    $condition: ModelPostConditionInput
+export const updatePOST = /* GraphQL */ `
+  mutation UpdatePOST(
+    $input: UpdatePOSTInput!
+    $condition: ModelPOSTConditionInput
   ) {
-    updatePost(input: $input, condition: $condition) {
+    updatePOST(input: $input, condition: $condition) {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt
@@ -39,17 +39,17 @@ export const updatePost = /* GraphQL */ `
     }
   }
 `;
-export const deletePost = /* GraphQL */ `
-  mutation DeletePost(
-    $input: DeletePostInput!
-    $condition: ModelPostConditionInput
+export const deletePOST = /* GraphQL */ `
+  mutation DeletePOST(
+    $input: DeletePOSTInput!
+    $condition: ModelPOSTConditionInput
   ) {
-    deletePost(input: $input, condition: $condition) {
+    deletePOST(input: $input, condition: $condition) {
       id
       title
+      image
       description
-      images_url
-      tags
+      caption
       _version
       _deleted
       _lastChangedAt

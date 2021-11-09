@@ -1,80 +1,7 @@
 export const schema = {
     "models": {
-        "Profile": {
-            "name": "Profile",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "username": {
-                    "name": "username",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "posts": {
-                    "name": "posts",
-                    "isArray": true,
-                    "type": {
-                        "model": "Post"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "profileID"
-                    }
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "Profiles",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        "Post": {
-            "name": "Post",
+        "POST": {
+            "name": "POST",
             "fields": {
                 "id": {
                     "name": "id",
@@ -90,6 +17,14 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "image": {
+                    "name": "image",
+                    "isArray": true,
+                    "type": "AWSURL",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true
+                },
                 "description": {
                     "name": "description",
                     "isArray": false,
@@ -97,37 +32,10 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "images_url": {
-                    "name": "images_url",
-                    "isArray": false,
-                    "type": "AWSURL",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "tags": {
-                    "name": "tags",
+                "caption": {
+                    "name": "caption",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "author": {
-                    "name": "author",
-                    "isArray": false,
-                    "type": {
-                        "model": "Profile"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "postAuthorId"
-                    }
-                },
-                "profileID": {
-                    "name": "profileID",
-                    "isArray": false,
-                    "type": "ID",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -149,20 +57,11 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Posts",
+            "pluralName": "POSTS",
             "attributes": [
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byProfile",
-                        "fields": [
-                            "profileID"
-                        ]
-                    }
                 },
                 {
                     "type": "auth",
@@ -195,8 +94,10 @@ export const schema = {
                 "type": {
                     "name": "type",
                     "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
+                    "type": {
+                        "enum": "AboutSectionType"
+                    },
+                    "isRequired": true,
                     "attributes": []
                 },
                 "text": {
@@ -249,7 +150,16 @@ export const schema = {
             ]
         }
     },
-    "enums": {},
+    "enums": {
+        "AboutSectionType": {
+            "name": "AboutSectionType",
+            "values": [
+                "BLURB",
+                "CONTENT",
+                "FOUNDER_STATEMENT"
+            ]
+        }
+    },
     "nonModels": {},
-    "version": "c12d5d06480bfaea9ff95ba9cc99c542"
+    "version": "824d2a5de7a2ac3111f200b1592afc32"
 };

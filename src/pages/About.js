@@ -12,6 +12,7 @@ Amplify.configure(awsExports);
 const About = () => {
   const [aboutBlurb, setBlurb] = useState([])
   const [aboutContent, setContent] = useState([])
+  const [aboutFounderStatement, setFounderStatement] = useState([])
 
   const image1Path = '/image1.jpg'
   const image2Path = '/image2.jpg'
@@ -19,6 +20,7 @@ const About = () => {
   useEffect(() => {
     fetchBlurb()
     fetchContent()
+    fetchFounderStatement()
   }, [])
 
   async function fetchBlurb() {
@@ -26,13 +28,13 @@ const About = () => {
       const aboutData = await API.graphql(graphqlOperation(listAbouts, {
         filter: {
             type: {
-                eq: "blurb"
+                eq: "BLURB"
             }
         }
       }))
       const abouts = aboutData.data.listAbouts.items
       setBlurb(abouts[0])
-    } catch (err) { console.log('error fetching about data') }
+    } catch (err) { console.log('error fetching about blurb data') }
   }
 
   async function fetchContent() {
@@ -40,13 +42,27 @@ const About = () => {
       const aboutData = await API.graphql(graphqlOperation(listAbouts, {
         filter: {
             type: {
-                eq: "content"
+                eq: "CONTENT"
             }
         }
       }))
       const abouts = aboutData.data.listAbouts.items
       setContent(abouts[0])
-    } catch (err) { console.log('error fetching about data') }
+    } catch (err) { console.log('error fetching about content data') }
+  }
+
+  async function fetchFounderStatement() {
+    try {
+      const aboutData = await API.graphql(graphqlOperation(listAbouts, {
+        filter: {
+            type: {
+                eq: "FOUNDER_STATEMENT"
+            }
+        }
+      }))
+      const abouts = aboutData.data.listAbouts.items
+      setFounderStatement(abouts[0])
+    } catch (err) { console.log('error fetching about founder statement data') }
   }
 
   return (
@@ -63,11 +79,9 @@ const About = () => {
         </div>
         <div className="about-section-2">
         <img src={image2Path} ></img>
-        <p id="founders-statement">“Soccer is a universal language. Nothing brings people together like kicking a ball around, any time, anywhere. 
-          I’ve been playing soccer for over 20 years, and nothing brings me greater joy. 
-          The happiness I feel with a ball is not meant for me alone, I must share it with others. 
-          The reason I founded Balls 4 Kids is to give the gift of happiness with those who need it the most”  
-          <br/>- Nicholas Marshall</p>
+        <ReactMarkdown id="founders-statement">
+          {aboutFounderStatement.text}
+        </ReactMarkdown>
         </div>
         </div>
     </>
